@@ -6,7 +6,22 @@ function calculateTotalPrice (){
     const fastDeliveryPrice = parseFloat(document.getElementById('deliveryPrice').innerText);
     const totalPrice =baseModelPrice+exMemoryPrice+exStoragePrice+fastDeliveryPrice;
     document.getElementById('currentTotalPrice').innerText=totalPrice;
-    return totalPrice;
+    document.getElementById('pomoOffer').innerText = totalPrice;
+}
+//for Expatial offer
+function expatialOffer(){
+   const prePrice = parseFloat(document.getElementById('currentTotalPrice').innerText);
+   const offerPrice = prePrice - (prePrice/20);
+   document.getElementById('pomoOffer').innerText =offerPrice;
+
+}
+// check pomo code validety
+function chackPomoCode(userCode){
+    if(userCode=='stevekako'){
+        expatialOffer();
+    }else{
+        alert('Not Match');
+    }
 }
 // select apple option for better performance 
 document.getElementById('apple').addEventListener('click',function(event){
@@ -26,6 +41,11 @@ document.getElementById('apple').addEventListener('click',function(event){
     }else if (pressButton == 'deliveryButton21'){
         document.getElementById('deliveryPrice').innerText=20;
     }
-    calculateTotalPrice();
+    const currentImacPrice =calculateTotalPrice();
+    
 
+});
+document.getElementById('pomo').addEventListener('click',function(){
+    const userCode = document.getElementById('userInput').Value;
+    chackPomoCode(userCode);
 });
