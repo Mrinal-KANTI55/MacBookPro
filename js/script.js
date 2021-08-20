@@ -1,3 +1,14 @@
+// calculate price for chooseing extra equipment
+function calculateTotalPrice (){
+    const baseModelPrice = parseFloat(document.getElementById('basePrice').innerText);
+    const exMemoryPrice = parseFloat(document.getElementById('memoryPrice').innerText);
+    const exStoragePrice = parseFloat(document.getElementById('extraStoragePrice').innerText);
+    const fastDeliveryPrice = parseFloat(document.getElementById('deliveryPrice').innerText);
+    const totalPrice =baseModelPrice+exMemoryPrice+exStoragePrice+fastDeliveryPrice;
+    document.getElementById('currentTotalPrice').innerText=totalPrice;
+    return totalPrice;
+}
+// select apple option for better performance 
 document.getElementById('apple').addEventListener('click',function(event){
     let pressButton = event.target.id;
     if(pressButton == 'memoryButton8'){
@@ -15,4 +26,6 @@ document.getElementById('apple').addEventListener('click',function(event){
     }else if (pressButton == 'deliveryButton21'){
         document.getElementById('deliveryPrice').innerText=20;
     }
-})
+    calculateTotalPrice();
+
+});
