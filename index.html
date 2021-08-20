@@ -9,34 +9,34 @@
 <body>
     <header></header>
     <main>
-        <section>
+        <section id="apple">
             <h1>mac-book-pro</h1>
             <div>
                 <h1>Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
                 <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse Magic Keyboard - US English</p>
 
             </div>
-            <div>
+            <div id="memory">
                 <h4>Memory</h4>
-                <button type="submit">8GB unified memory</button>
-                <button type="submit">16GB unified memory</button>
+                <button type="submit" id="memoryButton8">8GB unified memory</button>
+                <button type="submit" id="memoryButton16">16GB unified memory</button>
             </div>
-            <div>
+            <div id="storage">
                 <h4>Storage</h4>
-                <button type="submit">256GB SSD storage</button>
-                <button type="submit">512GB SSD storage</button>
-                <button type="submit">1TB SSD storage</button>
+                <button type="submit" id="storageButton256">256GB SSD storage</button>
+                <button type="submit" id="storageButton512">512GB SSD storage</button>
+                <button type="submit" id="storageButton1">1TB SSD storage</button>
             </div>
-            <div>
+            <div id="delivery">
                 <h4>Choose your delivery option</h4>
-                <button type="submit">Friday, Aug 25 FREE Prime Delivery</button>
-                <button type="submit">Friday, Aug 21 Delivery charge $20</button>
+                <button type="submit" id="deliveryButton25">Friday, Aug 25 FREE Prime Delivery</button>
+                <button type="submit" id="deliveryButton21">Friday, Aug 21 Delivery charge $20</button>
             </div>
             <div>
                 <h3>Best Price $<span>1299</span></h3><hr>
-                <h3>Extra Memory Cost $ <span>0</span></h3><hr>
-                <h3>Extra Storage Cost $<span>0</span></h3><hr>
-                <h3>Delivery charge $<span>0</span></h3><hr>
+                <h3>Extra Memory Cost $ <span id="memoryPrice">0</span></h3><hr>
+                <h3>Extra Storage Cost $<span id="extraStoragePrice">0</span></h3><hr>
+                <h3>Delivery charge $<span id="deliveryPrice">0</span></h3><hr>
                 <h3>Total Price $<span>0</span></h3><hr>
                 <p>Add Pomo code</p>
                 <input type="text" name="" id="">
@@ -52,5 +52,6 @@
         </section>
     </main>
     <footer></footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
