@@ -16,6 +16,9 @@ body{
     display: inline-block;
     margin-left: 90px;
 }
+ hr.hrCororDeep{
+    border: 3px solid rgba(5, 2, 2, 0.979);
+}
 
 .w-60{
     width: 60% !important;
