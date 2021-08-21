@@ -2,7 +2,7 @@ let totalPrice ;
 let finalPrice;
 const setFinalPriceWithoutOfferLoc = document.getElementById('withoutPomoOffer');
 const setFinalPriceLoc = document.getElementById('withPomoOffer');
-//for Expatial offer
+//for Expatial offer price calculation
 function expatialOffer(){
     const prePrice = parseFloat(document.getElementById('currentTotalPrice').innerText);
     const offerPrice = prePrice - ( prePrice * .2);
@@ -16,6 +16,7 @@ function calculateTotalPrice (){
     const fastDeliveryPrice = parseFloat(document.getElementById('deliveryPrice').innerText);
     totalPrice =baseModelPrice+exMemoryPrice+exStoragePrice+fastDeliveryPrice;
     document.getElementById('currentTotalPrice').innerText=totalPrice;
+    setFinalPriceWithoutOfferLoc.innerText=totalPrice;
 }
 // check pomo code validety
 function chackPomoCode(userCode){
@@ -31,12 +32,8 @@ function chackPomoCode(userCode){
 function visibleFinalPrice (userCode){
     if (userCode =='stevekako'){
         setFinalPriceLoc.innerText =finalPrice;
-        // setFinalPriceLoc.style.display=block;
-        // setFinalPriceWithoutOfferLoc.display=none;
-    }else{
-        setFinalPriceWithoutOfferLoc.innerText=totalPrice;
-        // setFinalPriceWithoutOfferLoc.display=block;
-        // setFinalPriceLoc.style.display=none;
+        setFinalPriceLoc.style.display='inline';
+        setFinalPriceWithoutOfferLoc.style.display='none';
     }
 }
 // select apple option for better performance 
@@ -58,8 +55,8 @@ document.getElementById('apple').addEventListener('click',function(event){
         document.getElementById('deliveryPrice').innerText=20;
     }
     calculateTotalPrice();
-    visibleFinalPrice('');
 });
+// for pomo button 
 document.getElementById('pomo').addEventListener('click',function(){
     const userCode = document.getElementById('userInput').value;
     document.getElementById('userInput').value='';
