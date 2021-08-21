@@ -4,7 +4,19 @@
 body{
     font-family: 'Open Sans', sans-serif !important;
 }
+.tab {
+    display: inline-block;
+    margin-left: 45px;
+}
+.tab2 {
+    display: inline-block;
+    margin-left: 80px;
+}
+.tab3 {
+    display: inline-block;
+    margin-left: 90px;
+}
 
-.text-Inline{
-    display: inline;
+.w-60{
+    width: 60% !important;
 }
